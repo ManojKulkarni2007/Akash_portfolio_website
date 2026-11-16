@@ -687,9 +687,27 @@ button {
         color: black;
     }
 
-    .navbar,
     .footer,
     .document-heading button {
+        display: none !important;
+    }
+
+    /* Keep the navigation header visible when printing */
+    .navbar {
+        display: flex !important;
+        position: static;
+        background: var(--charcoal) !important;
+        border-bottom: 2px solid var(--orange) !important;
+        box-shadow: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .nav-links {
+        display: flex !important;
+    }
+
+    .menu-toggle {
         display: none !important;
     }
 
